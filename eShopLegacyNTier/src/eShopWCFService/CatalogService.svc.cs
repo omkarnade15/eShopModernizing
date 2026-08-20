@@ -1,12 +1,10 @@
-﻿using eShopWCFService.Models;
+using eShopWCFService.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
+using CoreWCF;
+using Microsoft.EntityFrameworkCore;
 
 namespace eShopWCFService
 {
@@ -14,11 +12,6 @@ namespace eShopWCFService
     public class CatalogService : ICatalogService
     {
         private EntityModel ents;
-
-        public CatalogService()
-        {
-            ents = new EntityModel();
-        }
 
         public CatalogService(EntityModel ents)
         {
